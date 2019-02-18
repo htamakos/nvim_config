@@ -35,6 +35,7 @@ endif
 filetype plugin indent on
 syntax enable
 syntax on
+autocmd BufNewFile,BufRead *.gvy setfiletype groovy
 
 let g:rustfmt_autosave = 1
 let mapleader = "\<Space>"
