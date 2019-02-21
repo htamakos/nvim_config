@@ -99,3 +99,5 @@ hook_source = '''
     nmap <buffer> K  <plug>DeopleteRustShowDocumentation
 '''
 
+[[plugins]]
+repo = 'sjl/badwolf'
