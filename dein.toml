@@ -101,3 +101,58 @@ hook_source = '''
 
 [[plugins]]
 repo = 'sjl/badwolf'
+
+[[plugins]]
+repo = 'jalvesaq/Nvim-R'
+
+hook_source = '''
+let Rout_more_colors = 1
+let g:Rout_prompt_str = '» '
+autocmd BufWritePost *.R execute 'Rformat'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+  let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'r'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 's'  : 'S',
+    \ }
+  let g:airline_powerline_fonts = 1
+  let g:airline_theme = 'badwolf'
+  let g:airline#extensions#tabline#enabled = 1
+  
+  let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
+  
+  let g:airline#extensions#virtualenv#enabled = 1
+  
+  let g:airline#extensions#hunks#enabled = 0
+  
+  let g:airline#extensions#ale#enabled = 1
+  let g:airline#extensions#ale#error_symbol = 'E:'
+  let g:airline#extensions#ale#warning_symbol = 'W:'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+    let g:indent_guides_enable_on_vim_startup = 1
+'''
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim' 
+hook_add = '''
+    let g:jedi#auto_initialization = 1
+'''
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+

@@ -5,11 +5,6 @@ endif
 
 let s:dein_dir = expand("~/.cache/dein")
 
-let g:rustfmt_autosave = 1
-
-syntax on
-let g:rustfmt_autosave = 1
-
 syntax on
 
 let s:dein_repo_dir = s:dein_dir . "/repos/github.com/Shougo/dein.vim"
@@ -37,9 +32,15 @@ syntax enable
 syntax on
 autocmd BufNewFile,BufRead *.gvy setfiletype groovy
 colorscheme badwolf
+set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
+autocmd FileType python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType r setl tabstop=4 expandtab shiftwidth=2 softtabstop=2
 
 let g:rustfmt_autosave = 1
 let mapleader = "\<Space>"
+let maplocalleader = "\<Space>"
 
 inoremap <silent> jj <ESC>
 nnoremap <Leader>o :CtrlP<CR>

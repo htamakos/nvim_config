@@ -2,3 +2,18 @@
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['md', 'markdown']
 
+[[plugins]]
+repo = 'Vimjas/vim-python-pep8-indent'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+    let g:indent_guides_enable_on_vim_startup = 1
+'''
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim' 
+hook_add = '''
+    let g:jedi#auto_initialization = 1
+'''
